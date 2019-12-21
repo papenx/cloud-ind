@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	
+	<form class="form-inline my-2 my-lg-0" action="/add_task" method="POST">
+		{% csrf_token %}
+		<input class="form-control mr-sm-2" type="search" placeholder="Название" aria-label="Search" name="name">
+		<input class="form-control mr-sm-2" type="search" placeholder="Описание" aria-label="Search" name="description">
+		<input class="form-control mr-sm-2" type="search" placeholder="Замечания" aria-label="Search" name="additional">
+		
+		<button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Добавить задачу</button>
+	</form>
+
+{% endblock %}
